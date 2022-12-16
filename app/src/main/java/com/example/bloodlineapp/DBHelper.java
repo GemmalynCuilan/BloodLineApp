@@ -9,15 +9,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
-    public static final String DBName = "Login.db";
+    public static final String DBName = "userData.db";
 
     public DBHelper(Context context) {
-        super(context, "Login.db", null, 1);
+        super(context, "userData.db", null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
-        MyDB.execSQL("create Table users(usename TEXT primary key, password TEXT)");
+        MyDB.execSQL("create Table users(username TEXT primary key, age TEXT, address TEXT, mobileNumber TEXT, bloodGroups TEXT, password TEXT)");
 
     }
 
@@ -36,7 +36,8 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("bloodGroups", bloodGroups);
         contentValues.put("password", password);
         long result = MyDB.insert("users", null, contentValues);
-        if(result ==-1) return false;
+        if(result ==-1)
+            return false;
         else
             return true;
     }

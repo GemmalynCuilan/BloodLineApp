@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="314dp"
-        android:layout_height="281dp"
+        android:layout_width="311dp"
+        android:layout_height="257dp"
         android:layout_marginTop="92dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.539"
@@ -36,7 +36,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="339dp"
-        android:layout_height="173dp"
+        android:layout_height="216dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,15 +69,6 @@
             android:textColor="#c62c2c"
             android:textSize="18dp" />
 
-        <TextView
-            android:id="@+id/backButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:text="Already Registered? Sign In"
-            android:textColor="#000"
-            android:textStyle="bold" />
 
     </LinearLayout>
 

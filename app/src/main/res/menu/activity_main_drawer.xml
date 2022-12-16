@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+
+        <item android:title="Profile Settings">
+            <menu>
+                <item
+                    android:id="@+id/nav_myProfile"
+                    android:icon="@drawable/ic_user"
+                    android:title="My Profile"/>
+                <item
+                    android:id="@+id/nav_changeProfile"
+                    android:icon="@drawable/ic_user"
+                    android:title="Change Profile"/>
+
+            </menu>
+        </item>
+        <item android:title="Settings">
+            <menu>
+                <item
+                    android:id="@+id/menuLogout"
+                    android:icon="@drawable/ic_user"
+                    android:title="Logout"/>
+            </menu>
+        </item>
+    </group>
+</menu>
