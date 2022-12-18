@@ -1,16 +1,14 @@
-package com.example.bloodlineapp.donor;
+package com.example.bloodlineapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.bloodlineapp.R;
-
-public class MapActivity extends AppCompatActivity {
+public class RedCrossActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_red_cross);
     }
 }
