@@ -1,7 +1,5 @@
 package com.example.bloodlineapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,25 +8,36 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.bloodlineapp.donor.InformationActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
-import org.w3c.dom.Text;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.bloodlineapp.donor.DonorSignUpActivity;
+import com.example.bloodlineapp.donor.HomeActivity;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
 
     private Button loginButton;
-    private TextView backButton;
-    EditText username, password;
-    DBHelper DB;
-
+    private TextView backButton, textError;
+    EditText name, pass;
+    String username, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        username = (EditText) findViewById(R.id.username);
-        password = (EditText) findViewById(R.id.password);
-        DB = new DBHelper(this);
+
+        username = password = "";
+        name = (EditText) findViewById(R.id.username);
+        pass = (EditText) findViewById(R.id.password);
+        textError = (TextView) findViewById(R.id.error);
 
         backButton = (TextView) findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -42,22 +51,43 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String name = username.getText().toString();
-                String pass = password.getText().toString();
-                if(name.equals("")|pass.equals(""))
-                    Toast.makeText(LoginActivity.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
-                else{
-                    Boolean checknamepass = DB.checkusernamepassword(name, pass);
-                    if(checknamepass==true){
-                        Toast.makeText(LoginActivity.this, "Login successful ", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                        startActivity(intent);
-                    }else{
-                        Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
-                    }
+                textError.setVisibility(View.VISIBLE);
+                username = name.getText().toString().trim();
+                password = pass.getText().toString().trim();
 
-                }
+                RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+                String url = "http://192.168.1.47/bloodlinenew/login.php";
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                    if(response.equals("success")){
+                                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                        Toast.makeText(LoginActivity.this, "User has been login sucessfully!", Toast.LENGTH_SHORT).
+                                                show();
+                                    }else{
+                                        textError.setText(response);
+                                        textError.setVisibility(View.VISIBLE);
+                                    }
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(LoginActivity.this, error.toString().trim(), Toast.LENGTH_SHORT).show();
+                    }
+                }){
+                    protected Map<String, String> getParams(){
+                        Map<String, String> paramV = new HashMap<>();
+                        paramV.put("username", username);
+                        paramV.put("password", password);
+                        return paramV;
+                    }
+                };
+                queue.add(stringRequest);
             }
         });
     }
 }
+

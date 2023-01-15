@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.bloodlineapp.donor.DonorSignUpActivity;
+import com.example.bloodlineapp.recipient.RSignUpActivity;
+
 public class Selection extends AppCompatActivity {
 
 

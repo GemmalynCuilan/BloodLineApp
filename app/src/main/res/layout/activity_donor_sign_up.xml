@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DonorSignUpActivity">
+    tools:context=".donor.DonorSignUpActivity">
 
 
     <TextView
@@ -19,6 +19,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <LinearLayout
         android:layout_width="334dp"
@@ -111,7 +112,7 @@
                     android:textColorHint="@color/black" />
 
                 <Spinner
-                    android:id="@+id/bloodGroups"
+                    android:id="@+id/bloodGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -128,6 +129,7 @@
                     android:textSize="18dp"
                     android:textStyle="bold" />
 
+
                 <Button
                     android:id="@+id/signUpButton"
                     android:layout_width="match_parent"
@@ -140,6 +142,14 @@
                     android:text="Enter"
                     android:textColor="#FFFFFF"
                     android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/error_while_logging_in"
+                    android:textColor="#E53935"
+                    android:visibility="gone" />
             </LinearLayout>
         </ScrollView>
 

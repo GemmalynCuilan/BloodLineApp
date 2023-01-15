@@ -1,4 +1,4 @@
-package com.example.bloodlineapp;
+package com.example.bloodlineapp.donor;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,9 +8,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.bloodlineapp.donor.AchievementsActivity;
-import com.example.bloodlineapp.donor.ChangeProfile;
-import com.example.bloodlineapp.donor.InformationActivity;
+import com.example.bloodlineapp.LoginActivity;
+import com.example.bloodlineapp.MapsActivity;
+import com.example.bloodlineapp.MyProfile;
+import com.example.bloodlineapp.R;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;

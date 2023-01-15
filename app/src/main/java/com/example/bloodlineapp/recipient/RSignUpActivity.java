@@ -1,11 +1,14 @@
-package com.example.bloodlineapp;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.bloodlineapp.recipient;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.bloodlineapp.LoginActivity;
+import com.example.bloodlineapp.R;
 
 public class RSignUpActivity extends AppCompatActivity {
     private TextView backButton;

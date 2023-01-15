@@ -10,10 +10,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.bloodlineapp.HomeActivity;
 import com.example.bloodlineapp.R;
-
-import org.w3c.dom.Text;
 
 public class InformationActivity extends AppCompatActivity {
 
