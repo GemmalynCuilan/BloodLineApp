@@ -19,7 +19,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.bloodlineapp.LoginActivity;
 import com.example.bloodlineapp.R;
 
 import java.util.HashMap;
@@ -33,7 +32,6 @@ public class DonorSignUpActivity extends AppCompatActivity {
     TextView backButton, textError;
     Button signUpButton;
     ProgressDialog loadBar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +79,7 @@ public class DonorSignUpActivity extends AppCompatActivity {
                                     Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                                     startActivity(intent);
                                     finish();
-                                    Toast.makeText(DonorSignUpActivity.this, "User has been registered sucessfully!", Toast.LENGTH_SHORT).
+                                    Toast.makeText(DonorSignUpActivity.this, "User has been registered successfully!", Toast.LENGTH_SHORT).
                                             show();
                                 }else{
                                     textError.setText(response);

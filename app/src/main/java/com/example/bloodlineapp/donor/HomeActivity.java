@@ -8,18 +8,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.bloodlineapp.LoginActivity;
-import com.example.bloodlineapp.MapsActivity;
-import com.example.bloodlineapp.MyProfile;
-import com.example.bloodlineapp.R;
-import com.google.android.material.navigation.NavigationView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.bloodlineapp.MapsActivity;
+import com.example.bloodlineapp.MyProfile;
+import com.example.bloodlineapp.R;
+import com.example.bloodlineapp.Selection;
+import com.google.android.material.navigation.NavigationView;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -91,8 +91,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
 
     }else if (id == R.id.menuLogout) {
-        Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-        Toast.makeText(HomeActivity.this,"User has been Logout sucessfully!",Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(HomeActivity.this, Selection.class);
+        Toast.makeText(HomeActivity.this,"Logout successfully!",Toast.LENGTH_LONG).show();
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
