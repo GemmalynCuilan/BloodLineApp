@@ -11,7 +11,12 @@
         <item>AB-</item>
         <item>O+</item>
         <item>O-</item>
+    </string-array>
 
+    <string-array name="gender">
+        <item>Select your Gender</item>
+        <item>Female</item>
+        <item>Male</item>
     </string-array>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>

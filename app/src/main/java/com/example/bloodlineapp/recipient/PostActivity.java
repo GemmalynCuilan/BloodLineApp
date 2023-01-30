@@ -1,10 +1,12 @@
 package com.example.bloodlineapp.recipient;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,61 +19,74 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.bloodlineapp.donor.LoginActivity;
 import com.example.bloodlineapp.R;
+import com.example.bloodlineapp.donor.LoginActivity;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class RSignUpActivity extends AppCompatActivity {
-    private TextView backButton, textError;
-    EditText name, pass;
-    String username, bloodGroup, password;
+public class PostActivity extends AppCompatActivity {
+
+    EditText name, add, num;
+    String username, address, number, bloodGroup;
     Spinner bgroups;
-    Button signUpButton;
+    TextView textError;
+    Button postButton;
+    ProgressDialog loadBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_r_sign_up);
+        setContentView(R.layout.activity_post);
+
 
         name = (EditText) findViewById(R.id.username);
+        add = (EditText) findViewById(R.id.address);
+        num = (EditText) findViewById(R.id.number);
         bgroups = (Spinner) findViewById(R.id.bloodGroup);
-        pass = (EditText) findViewById(R.id.password);
-        textError = (TextView) findViewById(R.id.error);
-        backButton = findViewById(R.id.backButton);
-        backButton.setOnClickListener(new View.OnClickListener() {
+
+
+        loadBar = new ProgressDialog(this);
+
+        ImageButton arrowBack = (ImageButton) findViewById(R.id.arrowback_profile);
+        arrowBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RSignUpActivity.this, RloginActivity.class);
+                Intent intent = new Intent(PostActivity.this, DashboardActivity.class);
                 startActivity(intent);
+
             }
         });
-        signUpButton = (Button) findViewById(R.id.signUpButton);
-        signUpButton.setOnClickListener(new View.OnClickListener() {
+        postButton = (Button) findViewById(R.id.postButton);
+        postButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(PostActivity.this, DashboardActivity.class);
+                startActivity(intent);
 
-                textError.setVisibility(View.VISIBLE);
+
                 username = String.valueOf(name.getText());
+                address = String.valueOf(add.getText());
+                number = String.valueOf(num.getText());
                 bloodGroup = String.valueOf(bgroups.getSelectedItem());
-                password = String.valueOf(pass.getText());
 
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url = "http://192.168.1.47/bloodlinenew/register.php";
+                String url = "http://192.168.1.47/database/req.php";
+                String url1 = "https://bloodlinenew.000webhostapp.com/req.php";
+                String url2 = "http://192.168.0.151/database/login.php";
+                String url3 = "http://192.168.85.152/database/req.php";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
                                 if(response.equals("success")){
-                                    Intent intent = new Intent(getApplicationContext(), RloginActivity.class);
+                                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                                     startActivity(intent);
                                     finish();
-                                    Toast.makeText(RSignUpActivity.this, "User has been registered successfully!", Toast.LENGTH_SHORT).
+                                    Toast.makeText(PostActivity.this, "posted successfully!", Toast.LENGTH_SHORT).
                                             show();
                                 }else{
-                                    textError.setText(response);
-                                    textError.setVisibility(View.VISIBLE);
+                                    Toast.makeText(getApplicationContext(), response.toString().trim(), Toast.LENGTH_SHORT).show();
                                 }
                             }
                         }, new Response.ErrorListener() {
@@ -81,11 +96,12 @@ public class RSignUpActivity extends AppCompatActivity {
                     }
                 }){
                     protected Map<String, String> getParams(){
-                        Map<String, String> data = new HashMap<>();
-                        data.put("username", username);
-                        data.put("bloodGroup", bloodGroup);
-                        data.put("password", password);
-                        return data;
+                        Map<String, String> paramV = new HashMap<>();
+                        paramV.put("username", username);
+                        paramV.put("address", address);
+                        paramV.put("number", number);
+                        paramV.put("bloodGroup", bloodGroup);
+                        return paramV;
                     }
                 };
                 queue.add(stringRequest);

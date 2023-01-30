@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         username = password = "";
         name = (EditText) findViewById(R.id.username);
         pass = (EditText) findViewById(R.id.password);
-        textError = (TextView) findViewById(R.id.error);
+
 
         backButton = (TextView) findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -50,12 +50,15 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textError.setVisibility(View.VISIBLE);
+
                 username = name.getText().toString().trim();
                 password = pass.getText().toString().trim();
 
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url = "http://192.168.1.47/bloodlinenew/login.php";
+                String url =  "http://192.168.1.47/database/login.php";
+                String url1 = "https://bloodlinenew.000webhostapp.com/login.php";
+                String url2 = "http://192.168.0.151/database/login.php";
+                String url3 = "http://192.168.85.152/database/login.php";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {
                             @Override
@@ -67,8 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText(LoginActivity.this, "User has been login successfully!", Toast.LENGTH_SHORT).
                                                 show();
                                     }else{
-                                        textError.setText(response);
-                                        textError.setVisibility(View.VISIBLE);
+                                        Toast.makeText(getApplicationContext(), response.toString().trim(), Toast.LENGTH_SHORT).show();
                                     }
                             }
                         }, new Response.ErrorListener() {

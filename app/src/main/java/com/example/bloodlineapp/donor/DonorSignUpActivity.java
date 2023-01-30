@@ -27,8 +27,8 @@ import java.util.Map;
 public class DonorSignUpActivity extends AppCompatActivity {
 
     EditText name, userage, add, mobileNum, pass;
-    String username, age, address,mobileNumber, bloodGroup, password;
-    Spinner bgroups;
+    String username,  age, address,mobileNumber, bloodGroup, password, gender;
+    Spinner bgroups, bgender;
     TextView backButton, textError;
     Button signUpButton;
     ProgressDialog loadBar;
@@ -37,14 +37,16 @@ public class DonorSignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donor_sign_up);
-        username = age = address = mobileNumber = bloodGroup = password = "";
+
+        username = age = gender = address = mobileNumber = bloodGroup = password = "";
         name = (EditText) findViewById(R.id.username);
+        bgender = (Spinner) findViewById(R.id.gender);
         userage = (EditText) findViewById(R.id.age);
         add = (EditText) findViewById(R.id.address);
         mobileNum = (EditText) findViewById(R.id.mobileNumber);
         bgroups = (Spinner) findViewById(R.id.bloodGroup);
         pass = (EditText) findViewById(R.id.password);
-        textError = (TextView) findViewById(R.id.error);
+
 
         loadBar = new ProgressDialog(this);
 
@@ -61,8 +63,9 @@ public class DonorSignUpActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                textError.setVisibility(View.VISIBLE);
+
                 username = String.valueOf(name.getText());
+                gender = String.valueOf(bgender.getSelectedItem());
                 age = String.valueOf(userage.getText());
                 address = String.valueOf(add.getText());
                 mobileNumber = String.valueOf(mobileNum.getText());
@@ -70,7 +73,10 @@ public class DonorSignUpActivity extends AppCompatActivity {
                 password = String.valueOf(pass.getText());
 
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url = "http://192.168.1.47/bloodlinenew/signup.php";
+                String url = "http://192.168.1.47/database/signup.php";
+                String url1 = "https://bloodlinenew.000webhostapp.com/signup.php";
+                String url2 = "http://192.168.0.151/database/signup.php";
+                String url3 = "http://192.168.85.152/database/signup.php";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {
                             @Override
@@ -82,8 +88,7 @@ public class DonorSignUpActivity extends AppCompatActivity {
                                     Toast.makeText(DonorSignUpActivity.this, "User has been registered successfully!", Toast.LENGTH_SHORT).
                                             show();
                                 }else{
-                                    textError.setText(response);
-                                    textError.setVisibility(View.VISIBLE);
+                                    Toast.makeText(getApplicationContext(), response.toString().trim(), Toast.LENGTH_SHORT).show();
                                 }
                             }
                         }, new Response.ErrorListener() {
@@ -95,6 +100,7 @@ public class DonorSignUpActivity extends AppCompatActivity {
                     protected Map<String, String> getParams(){
                         Map<String, String> paramV = new HashMap<>();
                         paramV.put("username", username);
+                        paramV.put("gender", gender);
                         paramV.put("age", age);
                         paramV.put("address", address);
                         paramV.put("mobileNumber", mobileNumber);

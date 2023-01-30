@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/drawable-v24/ic_backspace.xml" value="0.152" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/drawable/bacground_btnsw.xml" value="0.1315" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/drawable/background.xml" value="0.194" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/drawable/background_button.xml" value="0.1315" />
@@ -10,7 +11,9 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.159" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/drawable/ic_phone.xml" value="0.16" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/drawable/ic_user.xml" value="0.16" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_achievements.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_change_profile.xml" value="0.2" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_dashboard.xml" value="0.11865942028985507" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_donor_sign_up.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_information.xml" value="0.22" />
@@ -19,14 +22,19 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_map.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_maps.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_my_profile.xml" value="0.2" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_post.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_r_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_red_cross.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_rlogin.xml" value="0.2" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_rq.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_selection.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_sign_up.xml" value="0.13269927536231885" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.1621376811594203" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_staff_sign_up.xml" value="0.18" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/activity_upload.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/app_bar_dashboard.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/app_bar_home.xml" value="0.18" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/content_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/content_home.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/BloodLineApp/app/src/main/res/layout/fragment_slideshow.xml" value="0.2" />

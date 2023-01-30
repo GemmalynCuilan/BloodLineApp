@@ -8,7 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.bloodlineapp.donor.DonorSignUpActivity;
-import com.example.bloodlineapp.recipient.RSignUpActivity;
+import com.example.bloodlineapp.recipient.DashboardActivity;
 
 public class Selection extends AppCompatActivity {
     @Override
@@ -29,7 +29,7 @@ public class Selection extends AppCompatActivity {
         recipientButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Selection.this, RSignUpActivity.class);
+                Intent intent = new Intent(Selection.this, DashboardActivity.class);
                 startActivity(intent);
             }
         });
