@@ -74,9 +74,9 @@ public class DonorSignUpActivity extends AppCompatActivity {
 
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 String url = "http://192.168.1.47/database/signup.php";
-                String url1 = "https://bloodlinenew.000webhostapp.com/signup.php";
+                String url1 = "http://192.168.43.71/database/signup.php";
                 String url2 = "http://192.168.0.151/database/signup.php";
-                String url3 = "http://192.168.85.152/database/signup.php";
+                String url3 = "https://bloodlineapp.000webhostapp.com/sign_new.php";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {
                             @Override
