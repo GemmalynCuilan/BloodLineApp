@@ -36,4 +36,5 @@
     <string name="hotline">Hotline</string>
     <string name="google_api_keys">AIzaSyDdmiXxOX3nqFRxhKf2GThZCjQvRzIiFm4</string>
     <string name="error_while_logging_in">error_while_logging_in</string>
+    <string name="nav_header_BloodLineApp">BloodLine App</string>
 </resources>

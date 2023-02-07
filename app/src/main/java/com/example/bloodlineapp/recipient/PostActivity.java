@@ -89,7 +89,7 @@ public class PostActivity extends AppCompatActivity {
 
                             @Override
                             public void onPermissionRationaleShouldBeShown(PermissionRequest permissionRequest, PermissionToken permissionToken) {
-
+                                permissionToken.continuePermissionRequest();
                             }
                         }).check();
             }
@@ -121,8 +121,8 @@ public class PostActivity extends AppCompatActivity {
                 bloodGroup = String.valueOf(bgroups.getSelectedItem());
 
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url = "http://192.168.1.47/database/req.php";
-                String url1 = "http://192.168.43.71/database/req.php";
+                String url = "http://192.168.1.47/admin1/req.php";
+                String url1 = "http://192.168.43.71/admin1/req.php";
                 String url2 = "http://192.168.0.151/database/req.php";
                 String url3 = "https://bloodlineapp.000webhostapp.com/req_new.php";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
@@ -130,7 +130,7 @@ public class PostActivity extends AppCompatActivity {
                             @Override
                             public void onResponse(String response) {
                                 if(response.equals("success")){
-                                    Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
+                                    Intent intent = new Intent(getApplicationContext(), PostActivity.class);
                                     startActivity(intent);
                                     finish();
                                     Toast.makeText(PostActivity.this, "You Have Posted Successfully!", Toast.LENGTH_SHORT).

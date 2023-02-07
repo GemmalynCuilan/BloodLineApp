@@ -1,10 +1,8 @@
-package com.example.bloodlineapp.donor;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.bloodlineapp;
 
 import android.os.Bundle;
 
-import com.example.bloodlineapp.R;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AchievementsActivity extends AppCompatActivity {
 

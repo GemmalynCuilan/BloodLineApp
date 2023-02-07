@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbarStyle="outsideOverlay"
-    tools:context=".donor.AchievementsActivity">
+    tools:context=".AchievementsActivity">
     <TextView
         android:gravity="center"
         android:id="@+id/ShowInof"

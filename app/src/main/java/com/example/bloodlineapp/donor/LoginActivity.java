@@ -55,8 +55,8 @@ public class LoginActivity extends AppCompatActivity {
                 password = pass.getText().toString().trim();
 
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url =  "http://192.168.1.47/database/login.php";
-                String url1 = "http://192.168.43.71/database/login.php";
+                String url =  "http://192.168.1.47/admin1/login.php";
+                String url1 = "http://192.168.43.71/admin1/login.php";
                 String url2 = "http://192.168.0.151/database/login.php";
                 String url3 = "https://bloodlineapp.000webhostapp.com/login_new.php";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,

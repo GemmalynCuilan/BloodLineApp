@@ -15,6 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.bloodlineapp.EventsActivity;
 import com.example.bloodlineapp.MapsActivity;
 import com.example.bloodlineapp.MyProfile;
 import com.example.bloodlineapp.R;
@@ -25,14 +26,14 @@ import com.google.android.material.navigation.NavigationView;
 
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-    private ImageView menu_post, menu_banks, menu_infos;
+    private ImageView menu_post, menu_banks, menu_infos, menu_announce;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        menu_post = (ImageView) findViewById(R.id.menu_achieve);
+        menu_post = (ImageView) findViewById(R.id.menu_post);
         menu_post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,6 +57,15 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 startActivity(intent);
             }
         });
+        menu_announce = (ImageView) findViewById(R.id.menu_announce);
+        menu_announce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, EventsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("BloodLine");
         setSupportActionBar(toolbar);

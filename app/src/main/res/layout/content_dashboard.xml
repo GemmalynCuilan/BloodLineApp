@@ -10,8 +10,8 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="324dp"
-        android:layout_height="374dp"
+        android:layout_width="326dp"
+        android:layout_height="395dp"
         android:background="@drawable/bacground_btnsw"
         android:overScrollMode="never"
         android:scrollbars="none"
@@ -27,19 +27,19 @@
 
 
             <LinearLayout
-                android:id="@+id/layoutAchieve"
+                android:id="@+id/layoutPost"
                 android:layout_width="135dp"
                 android:layout_height="135dp"
                 android:layout_marginTop="28dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/bacground_btnsw"
+                android:background="@drawable/button"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/menu_achieve"
+                    android:id="@+id/menu_post"
                     android:layout_width="86dp"
                     android:layout_height="91dp"
                     android:layout_margin="4dp"
@@ -62,7 +62,7 @@
                 android:layout_height="135dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="28dp"
-                android:background="@drawable/bacground_btnsw"
+                android:background="@drawable/button"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -95,7 +95,7 @@
                 android:layout_height="135dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="28dp"
-                android:background="@drawable/bacground_btnsw"
+                android:background="@drawable/button"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="parent"
@@ -120,6 +120,36 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/layoutAnnounce"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_marginStart="172dp"
+                android:layout_marginTop="192dp"
+                android:background="@drawable/button"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/menu_announce"
+                    android:layout_width="73dp"
+                    android:layout_height="76dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="4dp"
+                    android:src="@drawable/megaphone" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Announcements"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

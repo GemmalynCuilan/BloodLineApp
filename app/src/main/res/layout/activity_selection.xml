@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bacground_btnsw"
     tools:context=".Selection">
 
 
@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoupdate" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView"

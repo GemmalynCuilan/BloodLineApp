@@ -32,7 +32,7 @@
                 android:layout_height="135dp"
                 android:layout_marginTop="28dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/bacground_btnsw"
+                android:background="@drawable/button"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -45,13 +45,13 @@
                     android:layout_margin="4dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/badge" />
+                    android:src="@drawable/megaphone" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="User Achievements"
+                    android:text="Announcements"
                     android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -62,7 +62,7 @@
                 android:layout_height="135dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="28dp"
-                android:background="@drawable/bacground_btnsw"
+                android:background="@drawable/button"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -95,7 +95,7 @@
                 android:layout_height="135dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="28dp"
-                android:background="@drawable/bacground_btnsw"
+                android:background="@drawable/button"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="parent"

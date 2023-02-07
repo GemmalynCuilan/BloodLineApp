@@ -51,205 +51,206 @@
         android:textAllCaps="true"
         android:textSize="20sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="601dp"
-        android:layout_below="@+id/textTitle"
-        android:layout_marginTop="4dp"
-        android:orientation="vertical"
-        android:padding="20dp">
-
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/button"
-            android:orientation="horizontal">
+            android:layout_height="601dp"
+            android:layout_below="@+id/textTitle"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-            <TextView
-                android:id="@+id/sname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="Patient Name:" />
 
-            <EditText
-                android:id="@+id/username"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter your name"
-                android:inputType="text"
-                android:padding="5dp" />
-        </LinearLayout>
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/button"
-            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/sname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Patient Name:" />
 
-            <TextView
-                android:id="@+id/add"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="Address" />
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your name"
+                    android:inputType="text"
+                    android:padding="5dp" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/address"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter your address"
-                android:inputType="text"
-                android:padding="5dp" />
-        </LinearLayout>
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/button"
-            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Address" />
 
-            <TextView
-                android:id="@+id/snum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="Patient Number:" />
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your address"
+                    android:inputType="text"
+                    android:padding="5dp" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/number"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter your mobile number"
-                android:inputType="text"
-                android:padding="5dp" />
-        </LinearLayout>
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/button"
-            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/snum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Patient Number:" />
 
-            <TextView
-                android:id="@+id/hname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="Hospital Name:" />
+                <EditText
+                    android:id="@+id/number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your mobile number"
+                    android:inputType="text"
+                    android:padding="5dp" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/hospital"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter hospital"
-                android:inputType="text"
-                android:padding="5dp" />
-        </LinearLayout>
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/button"
-            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/hname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Hospital Name:" />
 
-            <TextView
-                android:id="@+id/cc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="Cc:" />
+                <EditText
+                    android:id="@+id/hospital"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter hospital"
+                    android:inputType="text"
+                    android:padding="5dp" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/ccname"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="ex: 1bag"
-                android:inputType="text"
-                android:padding="5dp" />
-        </LinearLayout>
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/button"
-            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/cc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Cc:" />
 
-            <TextView
-                android:id="@+id/bgrp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="Req.BloodGroup" />
+                <EditText
+                    android:id="@+id/ccname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ex: 1bag"
+                    android:inputType="text"
+                    android:padding="5dp" />
+            </LinearLayout>
 
-            <Spinner
-                android:id="@+id/bloodGroup"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/bloodGroups"
-                android:inputType="text"
-                android:padding="5dp" />
-        </LinearLayout>
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bgrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Req.BloodGroup" />
+
+                <Spinner
+                    android:id="@+id/bloodGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/bloodGroups"
+                    android:inputType="text"
+                    android:padding="5dp" />
+            </LinearLayout>
 
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="261dp">
-
-            <ImageView
-                android:id="@+id/reqimg"
-                android:layout_width="183dp"
-                android:layout_height="143dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/button" />
-
-            <Button
-                android:id="@+id/selectBtn"
-                android:layout_width="156dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="11dp"
-                android:layout_marginTop="44dp"
-                android:layout_marginEnd="13dp"
-                android:layout_marginBottom="162dp"
-                android:layout_toEndOf="@+id/reqimg"
-                android:text="SELECT IMAGE REQUEST FORM" />
-
-            <Button
-                android:id="@+id/postButton"
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/reqimg"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_gravity="center"
-                android:layout_marginStart="105dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="108dp"
-                android:layout_marginBottom="52dp"
-                android:background="@drawable/background_button"
-                android:gravity="center"
-                android:text="Saved" />
-        </RelativeLayout>
+                android:layout_height="261dp">
+
+                <ImageView
+                    android:id="@+id/reqimg"
+                    android:layout_width="202dp"
+                    android:layout_height="169dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/button" />
+
+                <Button
+                    android:id="@+id/selectBtn"
+                    android:layout_width="139dp"
+                    android:layout_height="78dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="57dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="126dp"
+                    android:layout_toEndOf="@+id/reqimg"
+                    android:text="SELECT IMAGE REQUEST FORM" />
+
+                <Button
+                    android:id="@+id/postButton"
+                    android:layout_width="159dp"
+                    android:layout_height="54dp"
+                    android:layout_below="@+id/reqimg"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="105dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="107dp"
+                    android:layout_marginBottom="17dp"
+                    android:background="@drawable/background_button"
+                    android:gravity="center"
+                    android:text="Saved" />
+            </RelativeLayout>
 
 
-    </LinearLayout>
+        </LinearLayout>
 
 </RelativeLayout>
