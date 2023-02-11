@@ -8,149 +8,140 @@
     tools:showIn="@layout/app_bar_dashboard"
     android:background="@drawable/background">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="326dp"
-        android:layout_height="395dp"
-        android:background="@drawable/bacground_btnsw"
-        android:overScrollMode="never"
-        android:scrollbars="none"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="351dp"
+        android:layout_height="407dp"
+        android:layout_marginTop="112dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        app:layout_constraintTop_toTopOf="parent">
 
 
-            <LinearLayout
-                android:id="@+id/layoutPost"
-                android:layout_width="135dp"
-                android:layout_height="135dp"
-                android:layout_marginTop="28dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/button"
+        <LinearLayout
+            android:id="@+id/layoutPost"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/background_new"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/menu_post"
+                android:layout_width="108dp"
+                android:layout_height="91dp"
+                android:layout_margin="4dp"
+                android:contentDescription="@string/app_name"
+                android:padding="8dp"
+                android:src="@drawable/contract" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:text="Post Requests"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/menu_post"
-                    android:layout_width="86dp"
-                    android:layout_height="91dp"
-                    android:layout_margin="4dp"
-                    android:contentDescription="@string/app_name"
-                    android:padding="8dp"
-                    android:src="@drawable/contract" />
+        <LinearLayout
+            android:id="@+id/layoutMap"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/background_new"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutInfos"
+            app:layout_constraintVertical_bias="0.0">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Post Requests"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/menu_banks"
+                android:layout_width="90dp"
+                android:layout_height="92dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/app_name"
+                android:padding="4dp"
+                android:src="@drawable/hospital" />
 
-            <LinearLayout
-                android:id="@+id/layoutMap"
-                android:layout_width="135dp"
-                android:layout_height="135dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
-                android:background="@drawable/button"
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutInfos"
-                app:layout_constraintVertical_bias="1.0">
+                android:text="Nearby Banks and Hospitals"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/menu_banks"
-                    android:layout_width="80dp"
-                    android:layout_height="82dp"
-                    android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
-                    android:padding="4dp"
-                    android:src="@drawable/hospital" />
+        <LinearLayout
+            android:id="@+id/layoutInfos"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_new"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
+            <ImageView
+                android:id="@+id/menu_infos"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/app_name"
+                android:padding="4dp"
+                android:src="@drawable/redcross" />
 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Nearby Banks and Hospitals"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+            <TextView
 
-            <LinearLayout
-                android:id="@+id/layoutInfos"
-                android:layout_width="135dp"
-                android:layout_height="135dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="28dp"
-                android:background="@drawable/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:text="Information"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/menu_infos"
-                    android:layout_width="73dp"
-                    android:layout_height="76dp"
-                    android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
-                    android:padding="4dp"
-                    android:src="@drawable/redcross" />
+        <LinearLayout
+            android:id="@+id/layoutAnnounce"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/background_new"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutPost">
 
-                <TextView
+            <ImageView
+                android:id="@+id/menu_announce"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/app_name"
+                android:padding="4dp"
+                android:src="@drawable/megaphone" />
 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Information"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+            <TextView
 
-            <LinearLayout
-                android:id="@+id/layoutAnnounce"
-                android:layout_width="135dp"
-                android:layout_height="135dp"
-                android:layout_marginStart="172dp"
-                android:layout_marginTop="192dp"
-                android:background="@drawable/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:id="@+id/menu_announce"
-                    android:layout_width="73dp"
-                    android:layout_height="76dp"
-                    android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
-                    android:padding="4dp"
-                    android:src="@drawable/megaphone" />
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Announcements"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+                android:text="Announcements"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

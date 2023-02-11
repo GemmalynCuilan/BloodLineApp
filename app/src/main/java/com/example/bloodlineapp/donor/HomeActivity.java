@@ -15,7 +15,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.example.bloodlineapp.EventsActivity;
 import com.example.bloodlineapp.MapsActivity;
 import com.example.bloodlineapp.MyProfile;
 import com.example.bloodlineapp.R;
@@ -31,14 +30,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        menu_achieve = (ImageView) findViewById(R.id.menu_achieve);
-        menu_achieve.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, EventsActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
         menu_infos = (ImageView) findViewById(R.id.menu_infos);
         menu_infos.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -18,6 +18,17 @@
         <item>Female</item>
         <item>Male</item>
     </string-array>
+
+    <string-array name="identifyno">
+        <item>Select Identification</item>
+        <item>School</item>
+        <item>Company</item>
+        <item>PRC</item>
+        <item>Driver\'s</item>
+        <item>SSS</item>
+        <item>Others</item>
+    </string-array>
+
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

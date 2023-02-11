@@ -64,7 +64,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/bacground_btnsw"
+            android:background="@drawable/background_new"
             android:text="Blood Recipient"
             android:textColor="#c62c2c"
             android:textSize="18dp" />
