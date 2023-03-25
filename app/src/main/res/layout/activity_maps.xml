@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MapsActivity"
     android:orientation="vertical"
     android:gravity="center_horizontal"
@@ -24,23 +25,22 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
-                    android:id="@+id/arrowback"
+                    android:id="@+id/arrowback_profile"
                     android:layout_width="70dp"
                     android:layout_height="50dp"
                     android:background="#791F1A"
-                    android:src="@drawable/ic_back"
+                    android:src="@drawable/ic_backspace"
                     tools:ignore="SpeakableTextPresentCheck" />
-                <TextView
-                    android:layout_width="316dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="1dp"
-                    android:layout_marginBottom="12dp"
-                    android:text="Nearby Banks and Hospitals"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/dashboard_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-28dp"
+                    android:layout_toEndOf="@+id/arrowback_profile"
+                    android:elevation="4dp"
+                    app:title="Find Nearby Banks and Hospitals"
+                    app:titleTextColor="@color/white" />
             </RelativeLayout>
 
         </androidx.appcompat.widget.Toolbar>

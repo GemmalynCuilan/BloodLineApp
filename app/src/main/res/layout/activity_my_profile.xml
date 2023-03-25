@@ -30,11 +30,21 @@
                     android:src="@drawable/ic_backspace"
                     tools:ignore="SpeakableTextPresentCheck" />
 
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/dashboard_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-28dp"
+                    android:layout_toEndOf="@+id/arrowback_profile"
+                    android:elevation="4dp"
+                    app:title="My profile"
+                    app:titleTextColor="@color/white" />
             </RelativeLayout>
 
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+
 
     <LinearLayout
         android:layout_width="354dp"

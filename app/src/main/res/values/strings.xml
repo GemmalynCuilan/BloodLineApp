@@ -13,8 +13,8 @@
         <item>O-</item>
     </string-array>
 
-    <string-array name="gender">
-        <item>Select your Gender</item>
+    <string-array name="sex">
+        <item>Select your Sex</item>
         <item>Female</item>
         <item>Male</item>
     </string-array>
@@ -24,9 +24,14 @@
         <item>School</item>
         <item>Company</item>
         <item>PRC</item>
-        <item>Driver\'s</item>
+        <item>Driver</item>
         <item>SSS</item>
         <item>Others</item>
+    </string-array>
+    <string-array name="select">
+        <item>Select yes or no</item>
+        <item>Yes</item>
+        <item>No</item>
     </string-array>
 
     <string name="title_activity_home">HomeActivity</string>

@@ -1,7 +1,5 @@
 package com.example.bloodlineapp;
 
-import androidx.fragment.app.FragmentActivity;
-
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.example.bloodlineapp.donor.HomeActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -41,7 +41,15 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
         etSource = findViewById(R.id.et_source);
         etDestination = findViewById(R.id.et_destination);
         btTrack = findViewById(R.id.bt_track);
+        ImageButton arrowBack = (ImageButton) findViewById(R.id.arrowback_profile);
+        arrowBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MapsActivity.this, HomeActivity.class);
+                startActivity(intent);
 
+            }
+        });
         btTrack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,14 +65,6 @@ public class MapsActivity extends FragmentActivity implements  OnMapReadyCallbac
             }
         });
 
-        ImageButton arrowBack = (ImageButton) findViewById(R.id.arrowback);
-        arrowBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MapsActivity.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        });
 
         SupportMapFragment supportMapFragment =(SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mMap);
        supportMapFragment.getMapAsync(this);

@@ -6,7 +6,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -15,13 +14,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.example.bloodlineapp.EventsActivity;
 import com.example.bloodlineapp.MapsActivity;
-import com.example.bloodlineapp.MyProfile;
 import com.example.bloodlineapp.R;
-import com.example.bloodlineapp.Selection;
-import com.example.bloodlineapp.donor.ChangeProfile;
-import com.example.bloodlineapp.donor.InformationActivity;
+import com.example.bloodlineapp.donor.ContactActivity;
+import com.example.bloodlineapp.donor.LoginActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -45,7 +41,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         menu_infos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DashboardActivity.this, InformationActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, ContactActivity.class);
                 startActivity(intent);
             }
         });
@@ -67,7 +63,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("BloodLine");
+        toolbar.setTitle("Home");
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -94,20 +90,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.nav_myProfile) {
-            Intent intent = new Intent(DashboardActivity.this, MyProfile.class);
+        if (id == R.id.menuLogout) {
+            Intent intent = new Intent(DashboardActivity.this, LoginActivity.class);
             startActivity(intent);
-        }
-        if (id == R.id.nav_changeProfile) {
-            Intent intent = new Intent(DashboardActivity.this, ChangeProfile.class);
-            startActivity(intent);
-
-        }else if (id == R.id.menuLogout) {
-            Intent intent = new Intent(DashboardActivity.this, Selection.class);
-            Toast.makeText(DashboardActivity.this,"Logout successfully!",Toast.LENGTH_LONG).show();
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-            finish();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

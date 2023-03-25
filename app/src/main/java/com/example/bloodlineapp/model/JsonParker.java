@@ -47,5 +47,3 @@ public class JsonParker {
         return parseJsonArray(jsonArray);
     }
 }
-
-

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".donor.DeveloperActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_settings"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#791F1A">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/dashboard_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="4dp"
+                    app:title="Developers Page"
+                    app:titleTextColor="@color/white" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="677dp"
+        android:layout_below="@+id/app_bar_settings"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="0dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image"
+                    android:layout_width="141dp"
+                    android:layout_height="149dp"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="91dp"
+                    android:src="@drawable/felix" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="140dp"
+                    android:text="Asenas, Felix\n Designer(Hipster)"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image2"
+                    android:layout_width="141dp"
+                    android:layout_height="149dp"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="91dp"
+                    android:src="@drawable/gem" />
+
+                <TextView
+                    android:id="@+id/gem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="140dp"
+                    android:text="Cuilan,Gemma-lyn\nProject Manager(Hustler)"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image1"
+                    android:layout_width="141dp"
+                    android:layout_height="149dp"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="91dp"
+                    android:src="@drawable/jessaca" />
+
+                <TextView
+                    android:id="@+id/jesss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="140dp"
+                    android:text="Espiritu,Jessaca\nProgrammer(Hacker) "
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+</RelativeLayout>

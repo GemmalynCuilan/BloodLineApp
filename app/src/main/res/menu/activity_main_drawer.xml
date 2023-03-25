@@ -14,21 +14,33 @@
                 <item
                     android:id="@+id/nav_myProfile"
                     android:icon="@drawable/ic_user"
-                    android:title="Change Password"/>
+                    android:title="View Profile"/>
                 <item
                     android:id="@+id/nav_changeProfile"
-                    android:icon="@drawable/ic_user"
+                    android:icon="@android:drawable/ic_menu_edit"
                     android:title="Update Profile"/>
+
+                <item
+                    android:id="@+id/nav_Password"
+                    android:icon="@drawable/ic_lock"
+                    android:title="Forgot Password"/>
 
             </menu>
         </item>
         <item android:title="Settings">
             <menu>
                 <item
+                    android:id="@+id/nav_dev"
+                    android:icon="@android:drawable/ic_dialog_info"
+                    android:title="Developers"/>
+
+                <item
                     android:id="@+id/menuLogout"
-                    android:icon="@drawable/ic_back"
+                    android:icon="@android:drawable/ic_menu_set_as"
                     android:title="Logout"/>
             </menu>
+
+
         </item>
     </group>
 </menu>

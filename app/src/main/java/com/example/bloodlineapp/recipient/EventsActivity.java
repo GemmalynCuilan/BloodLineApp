@@ -1,4 +1,4 @@
-package com.example.bloodlineapp;
+package com.example.bloodlineapp.recipient;
 
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +16,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.bloodlineapp.R;
+import com.example.bloodlineapp.RecyclerAdapter;
 import com.example.bloodlineapp.model.Event;
 
 import org.json.JSONArray;
@@ -34,7 +36,7 @@ public class EventsActivity extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private List<Event> events;
     private ProgressBar progressBar;
-    private static  final String BASE_URL = "http://192.168.1.47/database/getEvents.php";
+    private static  final String BASE_URL = "http://192.168.0.112/database/getEvents.php";
 
 
     @Override
@@ -48,11 +50,13 @@ public class EventsActivity extends AppCompatActivity {
         mActionBar = getSupportActionBar();
 
         recyclerView = findViewById(R.id.events_recyclerView);
-        manager = new GridLayoutManager(EventsActivity.this, 2);
+        manager = new GridLayoutManager(EventsActivity.this, 1);
         recyclerView.setLayoutManager(manager);
-        events = new ArrayList<>();
 
+
+        events = new ArrayList<>();
         getEvents();
+
 
     }
 
@@ -73,13 +77,15 @@ public class EventsActivity extends AppCompatActivity {
 
                                 JSONObject object = array.getJSONObject(i);
 
-                                String title = object.getString("title");
-                                String dtevent = object.getString("dtevent");
-                                String name = object.getString("name");
-                                String description = object.getString("description");
+                                String event_name = object.getString("event_name");
+                                String event_description = object.getString("event_description");
+                                String event_venue = object.getString("event_venue");
+                                String event_start_date = object.getString("event_start_date");
+                                String event_end_date = object.getString("event_end_date");
+                                String event_time = object.getString("event_time");
 
 
-                                Event event = new Event(title, dtevent, name, description);
+                                Event event = new Event(event_name, event_description, event_venue,event_start_date, event_end_date, event_time);
                                 events.add(event);
                             }
                         }catch (Exception e){

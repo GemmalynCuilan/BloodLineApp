@@ -6,29 +6,31 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_dashboard"
-    android:background="@drawable/background">
+    android:background="@drawable/background_new">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="351dp"
-        android:layout_height="407dp"
-        android:layout_marginTop="112dp"
+        android:layout_width="389dp"
+        android:layout_height="414dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/imageView4">
 
 
         <LinearLayout
             android:id="@+id/layoutPost"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="40dp"
             android:background="@drawable/background_new"
             android:gravity="center"
             android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2">
 
             <ImageView
                 android:id="@+id/menu_post"
@@ -52,7 +54,7 @@
             android:id="@+id/layoutMap"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="28dp"
             android:background="@drawable/background_new"
             android:gravity="center"
@@ -85,13 +87,14 @@
             android:id="@+id/layoutInfos"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="40dp"
             android:background="@drawable/background_new"
             android:gravity="center"
             android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2">
 
             <ImageView
                 android:id="@+id/menu_infos"
@@ -107,7 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Information"
+                android:text="Contact Details"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -117,7 +120,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginTop="28dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="40dp"
             android:background="@drawable/background_new"
             android:gravity="center"
             android:orientation="vertical"
@@ -138,10 +141,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Announcements"
+                android:text="RedCross Announcements"
                 android:textSize="17sp"
                 android:textStyle="bold" />
         </LinearLayout>
+
+        <TextView
+
+            android:layout_width="411dp"
+            android:layout_height="28dp"
+            android:background="@drawable/background_new"
+            android:gravity="center"
+            android:text="Hello Recipient!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="411dp"
+        android:layout_height="217dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/donor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

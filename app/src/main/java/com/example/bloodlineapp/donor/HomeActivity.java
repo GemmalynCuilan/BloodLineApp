@@ -15,6 +15,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.bloodlineapp.ChangeProfile;
+import com.example.bloodlineapp.recipient.EventsActivity;
 import com.example.bloodlineapp.MapsActivity;
 import com.example.bloodlineapp.MyProfile;
 import com.example.bloodlineapp.R;
@@ -23,20 +25,33 @@ import com.google.android.material.navigation.NavigationView;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-    private ImageView menu_achieve, menu_banks, menu_infos;
+    private ImageView menu_announce, menu_banks, menu_infos, menu_detail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-
-
+        menu_announce = (ImageView) findViewById(R.id.menu_announce);
+        menu_announce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, EventsActivity.class);
+                startActivity(intent);
+            }
+        });
         menu_infos = (ImageView) findViewById(R.id.menu_infos);
         menu_infos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, InformationActivity.class);
+                startActivity(intent);
+            }
+        });
+        menu_detail = (ImageView) findViewById(R.id.menu_detail);
+        menu_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, ContactActivity.class);
                 startActivity(intent);
             }
         });
@@ -49,7 +64,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             }
         });
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("BloodLine");
+        toolbar.setTitle("Home");
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -83,7 +98,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.nav_changeProfile) {
             Intent intent = new Intent(HomeActivity.this, ChangeProfile.class);
             startActivity(intent);
-
+        }
+        if (id == R.id.nav_Password) {
+            Intent intent = new Intent(HomeActivity.this, PasswordActivity.class);
+            startActivity(intent);
+        }
+        if (id == R.id.nav_dev) {
+                Intent intent = new Intent(HomeActivity.this, DeveloperActivity.class);
+                startActivity(intent);
     }else if (id == R.id.menuLogout) {
         Intent intent = new Intent(HomeActivity.this, Selection.class);
         Toast.makeText(HomeActivity.this,"Logout successfully!",Toast.LENGTH_LONG).show();

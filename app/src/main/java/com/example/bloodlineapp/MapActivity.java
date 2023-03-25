@@ -1,8 +1,5 @@
 package com.example.bloodlineapp;
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentActivity;
-
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -13,7 +10,10 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.bloodlineapp.donor.HomeActivity;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
+
+import com.example.bloodlineapp.recipient.DashboardActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -42,7 +42,15 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         etSource = findViewById(R.id.et_source);
         etDestination = findViewById(R.id.et_destination);
         btTrack = findViewById(R.id.bt_track);
+        ImageButton arrowBack = (ImageButton) findViewById(R.id.arrowback_profile);
+        arrowBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MapActivity.this, DashboardActivity.class);
+                startActivity(intent);
 
+            }
+        });
         btTrack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,14 +74,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         arrayList.add(BGH);
 
 
-        ImageButton arrowBack = (ImageButton) findViewById(R.id.arrowback);
-        arrowBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MapActivity.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     private void DisplayTrack(String sSource, String sDestination) {

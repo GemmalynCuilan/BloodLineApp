@@ -21,15 +21,44 @@
         android:theme="@style/Theme.BloodLineApp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".donor.DeveloperActivity"
+            android:exported="false" />
+        <activity
+            android:name=".donor.DonorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrepareActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bloodInfo"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".donor.InformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".donor.NewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".recipient.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".donor.EventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".donor.PasswordActivity"
+            android:exported="false" />
         <activity
             android:name=".RecyclerAdapter"
             android:exported="false" />
         <activity
-            android:name=".EventsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".notification.MainActivity"
+            android:name=".recipient.EventsActivity"
             android:exported="false" />
         <activity
             android:name=".donor.UploadActivity"
@@ -47,7 +76,7 @@
             android:name=".AchievementsActivity"
             android:exported="false" />
         <activity
-            android:name=".donor.InformationActivity"
+            android:name=".donor.ContactActivity"
             android:exported="false" />
         <activity
             android:name=".MapActivity"
@@ -58,7 +87,7 @@
             android:value="@string/map_key" />
 
         <activity
-            android:name=".donor.ChangeProfile"
+            android:name=".ChangeProfile"
             android:exported="false" />
         <activity
             android:name=".donor.HomeActivity"
@@ -86,6 +115,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".notification.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

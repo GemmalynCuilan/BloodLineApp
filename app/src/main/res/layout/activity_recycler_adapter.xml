@@ -1,52 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardUseCompatPadding="true"
-    app:cardElevation="2dp"
-    xmlns:tools="http://schemas.android.com/tools">
+    app:cardCornerRadius="12dp"
+    android:layout_margin="12dp"
+    android:id="@+id/card_view"
+    android:layout_height="120dp">
 
     <LinearLayout
-        android:id="@+id/event_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
-        android:clickable="true"
-        android:focusable="true"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="94dp"
+            android:layout_height="103dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/download" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/activity_horizontal_margin"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout2">
 
 
             <TextView
+                android:id="@+id/event_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="ksh 12,000"
-                android:id="@+id/title"/>
+                android:text="What can I give?"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:layout_conversion_absoluteHeight="22dp"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="105dp"
+                tools:layout_conversion_absoluteWidth="117dp" />
 
             <TextView
+                android:id="@+id/event_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Samsung Galaxy Note 10"
-                android:id="@+id/dtevent"/>
+                android:text="Choose between plasma, blood or platelets."
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                tools:layout_conversion_absoluteHeight="16dp"
+                tools:layout_editor_absoluteY="22dp"
+                tools:layout_editor_absoluteX="105dp"
+                tools:layout_conversion_absoluteWidth="236dp" />
             <TextView
+                android:id="@+id/event_venue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Baguio City"
-                android:id="@+id/name"/>
+                android:text="Choose between plasma, blood or platelets."
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                tools:layout_conversion_absoluteHeight="16dp"
+                tools:layout_editor_absoluteY="22dp"
+                tools:layout_editor_absoluteX="105dp"
+                tools:layout_conversion_absoluteWidth="236dp" />
             <TextView
+                android:id="@+id/event_start_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="blabala"
-                android:id="@+id/description"/>
-
-
+                android:text="Choose between plasma, blood or platelets."
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                tools:layout_conversion_absoluteHeight="16dp"
+                tools:layout_editor_absoluteY="22dp"
+                tools:layout_editor_absoluteX="105dp"
+                tools:layout_conversion_absoluteWidth="236dp" />
+            <TextView
+                android:id="@+id/event_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose between plasma, blood or platelets."
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                tools:layout_conversion_absoluteHeight="16dp"
+                tools:layout_editor_absoluteY="22dp"
+                tools:layout_editor_absoluteX="105dp"
+                tools:layout_conversion_absoluteWidth="236dp" />
+            <TextView
+                android:id="@+id/event_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose between plasma, blood or platelets."
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                tools:layout_conversion_absoluteHeight="16dp"
+                tools:layout_editor_absoluteY="22dp"
+                tools:layout_editor_absoluteX="105dp"
+                tools:layout_conversion_absoluteWidth="236dp" />
         </LinearLayout>
 
     </LinearLayout>
